@@ -8,7 +8,7 @@ import "./main.style.sass";
 export function Main() {
   const [res, setRes] = React.useState("Empty");
   React.useEffect(() => {
-    fetch("/user").then(response => {
+    fetch("https://localhost:44365/user").then(response => {
       console.log("RESPONSE from API:", response);
       setRes(String(response.body));
     });

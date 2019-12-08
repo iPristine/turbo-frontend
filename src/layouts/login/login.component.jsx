@@ -28,13 +28,13 @@ export function Login() {
               type="password"
               placeholder="password"
             />
-            <button className="auth-form__button">Войти</button>
-            <div className="auth-form__registration">
-              <div className="auth-form__text">Нет аккаунта?</div>
-              <Link to="/registration" className="auth-form__link">
-                Create
-              </Link>
-            </div>
+          </div>
+          <button className="auth-form__button">Войти</button>
+          <div className="auth-form__registration">
+            <div className="auth-form__text">Нет аккаунта?</div>
+            <Link to="/registration" className="auth-form__link">
+              Create
+            </Link>
           </div>
         </div>
       </div>
