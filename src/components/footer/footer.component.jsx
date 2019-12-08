@@ -1,6 +1,5 @@
 import React from "react";
 
-import vkLogo from "../../assets/images/vk.png";
 import instaLogo from "../../assets/images/insta.png";
 import mailLogo from "../../assets/images/mail.svg";
 
@@ -12,7 +11,11 @@ export function Footer() {
       <div className="footer__title">Ищи меня тут:</div>
       <div className="footer__links">
         <a href="http://vk.com/schubiin">
-          <img className="links__logo" src={vkLogo} alt="vk logo" />
+          <img
+            className="links__logo"
+            src="https://www.shareicon.net/data/2015/09/17/102625_vkontakte_512x512.png"
+            alt="vk logo"
+          />
         </a>
         <a href="http://vk.com/schubiin">
           <img className="links__logo" src={instaLogo} alt="insta logo" />

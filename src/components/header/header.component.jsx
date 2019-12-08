@@ -1,6 +1,6 @@
 import React from "react";
-import A from "../../assets/images/a.jpg";
 import B from "../../assets/images/b.jpg";
+import M from "../../assets/images/m.png";
 import { Link } from "react-router-dom";
 import "./header.style.sass";
 
@@ -11,16 +11,16 @@ export function Header() {
   const onKeyPress = e => {
     if (e.key === "e" && currKey === "") {
       setCurrKey("e");
-    }
-    if (e.key === "w" && currKey === "e") {
+    } else if (e.key === "w" && currKey === "e") {
       setCurrKey("w");
-    }
-    if (e.key === "q" && currKey === "w") {
+    } else if (e.key === "q" && currKey === "w") {
       setVisible(true);
       setTimeout(() => {
         setVisible(false);
       }, 1000);
       //R U pathHunter? @iPristine
+    } else {
+      setCurrKey("");
     }
   };
   React.useEffect(() => {
@@ -33,15 +33,19 @@ export function Header() {
       <Link to="/">
         <div className="header__logo">Turbo</div>
       </Link>
-      {visible && (
+      {visible ? (
         <div className="header__delete">
-          <img src={A} alt="villi" height="100px" />
+          <img src="https://bit.ly/2LP7Jjp" alt="villi" height="100px" />
           <img
             className="header__delete_anim"
             src={B}
             alt="andre"
             height="100px"
           />
+        </div>
+      ) : (
+        <div className="header__delete">
+          <img src={M} alt="villi" height="100px" />
         </div>
       )}
       <Link to="/login" className="header__user">
